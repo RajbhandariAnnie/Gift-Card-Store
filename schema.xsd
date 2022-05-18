@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="store">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="storeDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="storeName" type="xs:string" />
+              <xs:element name="address" type="xs:string" />
+              <xs:element name="Phone">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:pattern value="[0-9]{10}" />
+                    </xs:restriction>
+                    </xs:simpleType>
+              </xs:element>
+              <xs:element name="website" type="xs:string" />
+              <xs:element name="email">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                        <xs:pattern value="[^@]+@[^\.]+\..+"/>
+                        </xs:restriction>
+                        </xs:simpleType>
+              </xs:element>
+              <xs:element name="logo">
+                <xs:complexType>
+                  <xs:attribute name="format" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="giftCard">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="card" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="card_code" minOccurs="0" type="xs:string" />
+                    <xs:element name="card_name" type="xs:string" />
+                    <xs:element name="cost">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="currency" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="validity" type="xs:string" />
+                    <xs:element name="number_of_users" type="xs:string" />
+                    <xs:element name="discountVouchers">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="free_delivery" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="is_available" minOccurs="0" type="xs:string" />
+                    <xs:element name="available_quantity" minOccurs="0" type="xs:string" />
+                    <xs:element name="used_quantity" minOccurs="0" type="xs:string" />
+                    <xs:element name="countries_accepted" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="country" maxOccurs="unbounded">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="US"/>
+                                            <xs:enumeration value="IN"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="type" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="physical" />
+                        <xs:enumeration value="digital" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

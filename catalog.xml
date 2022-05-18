@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+<store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+    <storeDetails>
+        <storeName>Annie's Store</storeName>
+        <address>Lond St</address>
+        <Phone>9805667717</Phone>
+        <website>www.giftcardstore.com</website>
+        <email>Store@gmail.com</email>
+        <logo format="png"></logo>
+    </storeDetails>
+    <giftCard>
+        <card type="physical">
+            <card_name>Gift Card</card_name>
+            <cost currency="USD">10.00</cost>
+            <validity>1 month</validity>
+            <number_of_users>100</number_of_users>
+            <discountVouchers type="percentage">10</discountVouchers>
+            <free_delivery type="boolean">true</free_delivery>
+            <is_available>true</is_available>
+            <available_quantity>100</available_quantity>
+            <used_quantity>0</used_quantity>
+            <countries_accepted>
+                <country>US</country>
+                <country>IN</country>
+            </countries_accepted>
+        </card>
+        <card type="digital">
+            <card_code>9876</card_code>
+            <card_name>e-Gift Card</card_name>
+            <cost currency="USD">10.00</cost>
+            <validity>2 years</validity>
+            <number_of_users>100</number_of_users>
+            <discountVouchers type="amount">10.00</discountVouchers>
+        </card>
+        <card type="physical">
+            <card_name>Gift Card</card_name>
+            <cost currency="USD">12.00</cost>
+            <validity>1 week</validity>
+            <number_of_users>36</number_of_users>
+            <discountVouchers type="percentage">40</discountVouchers>
+        </card>
+        <card type="physical">
+            <card_name>Gift Card</card_name>
+            <cost currency="USD">14.00</cost>
+            <validity>2 weeks</validity>
+            <number_of_users>40</number_of_users>
+            <discountVouchers type="percentage">30</discountVouchers>
+        </card>
+        <card type="digital">
+            <card_name>Gift Card</card_name>
+            <cost currency="USD">15.00</cost>
+            <validity>1 week</validity>
+            <number_of_users>50</number_of_users>
+            <discountVouchers type="percentage">45</discountVouchers>
+        </card>
+    </giftCard>
+</store>

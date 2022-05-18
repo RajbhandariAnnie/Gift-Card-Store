@@ -1,0 +1,129 @@
+* {
+  display: block;
+}
+
+store {
+  width: 100%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.68);
+}
+
+logo {
+  position: absolute;
+  margin-top: 20px;
+  top: 0;
+  float: right;
+  background-image: url("Annie\'s.png");
+  background-size: 150px;
+  height: 200px;
+  width: 300px;
+  background-repeat: no-repeat;
+}
+
+storeDetails {
+  background: rgba(250, 249, 249, 0.9);
+  text-align: center;
+  color: rgb(18, 60, 158);
+  padding-top: 10px;
+  font-size: 20px;
+  font-family: 'Forte', sans-serif;
+  padding: 20px;
+}
+
+storeName::before {
+  content: 'Store Name: ';
+}
+address::before {
+  content: 'Address: ';
+}
+Phone::before {
+  content: 'Phone: ';
+}
+website::before {
+  content: 'Website: ';
+}
+email::before {
+    content: 'Email: ';
+  }
+logo::before {
+  content: ' ';
+}
+
+giftcard {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+card{
+  background-color: rgb(85, 108, 161);
+  border: 5px solid #1c2947;
+  padding: 30px;
+  color: #e2e1e1;
+  
+}
+
+card::before {
+  content: 'Card Information';
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+  font-size: 40px;
+}
+
+card_code::before{
+  content: 'Card Code: ';
+  font-weight: bold;
+}
+
+card_name::before {
+  content: 'Card Name: ';
+  font-weight: bold;
+}
+
+cost:before {
+  content: 'Cost: ';
+  font-weight: bold;
+}
+
+validity::before {
+  content: 'Validation: ';
+  font-weight: bold;
+}
+
+number_of_users::before {
+  content: 'Number of Users: ';
+  font-weight: bold;
+}
+
+discountVouchers::before {
+  content: 'Discount: ';
+  font-weight: bold;
+}
+free_delivery::before {
+    content: 'Free Delivery: ';
+    font-weight: bold;
+  }
+is_available::before {
+    content: 'Is Available: ';
+    font-weight: bold;
+  }
+available_quantity::before {
+    content: 'Available Quantity: ';
+    font-weight: bold;
+  }
+used_quantity::before {
+    content: 'Used Quantity: ';
+    font-weight: bold;
+  }
+countries_accepted::before {
+    content: 'Countries Accepted: ';
+    font-weight: bold;
+}
+country{
+    display: list-item;
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+
